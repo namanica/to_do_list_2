@@ -22,6 +22,7 @@ async function getTodos() {
 
 export default async function Home() {
   const data = await getTodos();
+  // let length = data.length;
   return (
     <div className='wrapper'>
       <div className='container'>
@@ -32,7 +33,7 @@ export default async function Home() {
           </Link>
         </span>
         {
-            data.length>0 && (
+            data.length > 0 && (
             <div className='todo-list'>
               {
                 data.map((todo) => {
